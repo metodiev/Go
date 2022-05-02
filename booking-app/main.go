@@ -3,5 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Print("Hello World")
+	fmt.Println("Welcome to our conference booking application")
+	fmt.Println("Get your tickets here to attend")
+
+	var conferenceName string = "Go Conference"
+	fmt.Println(conferenceName)
 }
