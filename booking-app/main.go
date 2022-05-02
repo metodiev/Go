@@ -42,7 +42,7 @@ func main() {
 	fmt.Scan(&email)
 
 	remainingTickets = remainingTickets - userTickets
-	fmt.Printf("%v tickets remainig for %v \n", remainingTickets)
+	fmt.Printf("%v tickets remainig for %v \n", remainingTickets, username)
 	
 }
 
