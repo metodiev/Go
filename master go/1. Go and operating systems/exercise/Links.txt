@@ -1,0 +1,11 @@
+Visit the Go site: https://golang.org/.
+Visit the site of Docker: https://www.docker.com/.
+Visit the Docker Hub site: https://hub.docker.com/.
+Go 2 Draft Designs: https://blog.golang.org/go2draft.
+Browse the Go documentation site: https://golang.org/doc/.
+Visit the documentation of the log package at https://golang.org/pkg/log/.
+Visit the documentation of the log/syslog package at
+https://golang.org/pkg/log/syslog/.
+Visit the documentation of the os package at https://golang.org/pkg/os/.
+Have a look at https://golang.org/cmd/gofmt/, which is the documentation
+page of the gofmt tool that is used for formatting Go code
