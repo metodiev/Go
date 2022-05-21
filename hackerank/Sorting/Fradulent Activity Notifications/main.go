@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"sort"
 )
 
@@ -18,28 +17,33 @@ func activityNotifications(expenditure []int32, d int32) int32 {
 	// Write your code here
 	//order the slice
 	var numberOfNotifications int32
-
+	var medianArrSizeCounter int32
+	medianArrSizeCounter = 0
 	for i := 0; i < len(expenditure); i++ {
 		var median int32
 		//after the bank get enough transaction data
 		if int32(i) >= d {
 			medianArr := make([]int32, d)
-			copy(medianArr, expenditure[:i])
-            fmt.Println(medianArr)
+			copy(medianArr, expenditure[medianArrSizeCounter:i])
+
 			sort.Slice(medianArr, func(i, j int) bool { return medianArr[i] < medianArr[j] })
 
 			if len(medianArr)%2 == 0 {
 				median = (medianArr[len(medianArr)/2] + medianArr[(len(medianArr)/2)+1]) / 2
-
 			} else if len(medianArr)%2 != 0 {
 				median = int32(medianArr[len(medianArr)/2])
 			}
-			fmt.Println("coutner", i)
-			fmt.Println(median)
-			
+			//fmt.Println("coutner", i)
+			//fmt.Println(median)
+			//fmt.Println(medianArr)
+			medianArrSizeCounter++
+			if expenditure[i] >= (median * 2) {
+				numberOfNotifications++
+			}
 		}
 	}
 
+	//fmt.Println(numberOfNotifications)
 	return numberOfNotifications
 }
 
@@ -76,9 +80,9 @@ func main() {
 	//     expenditure = append(expenditure, expenditureItem)
 	// }
 
-	expenditure := []int32{2, 3, 4, 2, 3, 6, 8, 4, 5}
+	expenditure := []int32{1, 2, 3, 4, 4}
 	var d int32
-	d = 5
+	d = 4
 
 	activityNotifications(expenditure, d)
 
