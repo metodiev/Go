@@ -20,18 +20,18 @@ func makeAnagram(a string, b string) int32 {
 	//var m map[string]string
 	stringSet := map[string]struct{}{}
 
-	for i := 0; i < len(b); i++ {
-		if !strings.Contains(a, string(b[i])) {
-			stringSet[string(b[i])] = struct{}{}
-			fmt.Println(string(b[i]))
-			deletingCharacters++
-		}
-	}
-
 	for i := 0; i < len(a); i++ {
 		if !strings.Contains(b, string(a[i])) {
 			stringSet[string(a[i])] = struct{}{}
 			fmt.Println(string(a[i]))
+			deletingCharacters++
+		}
+	}
+
+	for i := 0; i < len(b); i++ {
+		if !strings.Contains(a, string(b[i])) {
+			stringSet[string(b[i])] = struct{}{}
+			fmt.Println(string(b[i]))
 			deletingCharacters++
 		}
 	}
@@ -83,8 +83,8 @@ func makeAnagram(a string, b string) int32 {
 }
 
 func main() {
-	a := "jxwtrhvujlmrpdoqbisbwhmgpmeoke"
-	b := "fcrxzwscanmligyxyvym"
+	a := "cde"
+	b := "dfc"
 
 	makeAnagram(a, b)
 }
