@@ -24,6 +24,20 @@ func isValid(s string) string {
 		charactersCounterMap[string(s[i])] = strings.Count(s, string(s[i]))
 	}
 
+	//sort map key
+	// unSortedMap := map[string]int{"India": 20, "Canada": 70, "Germany": 15}
+ 
+	// keys := make([]string, 0, len(unSortedMap))
+ 
+	// for k := range unSortedMap {
+	// 	keys = append(keys, k)
+	// }
+	// sort.Strings(keys)
+ 
+	// for _, k := range keys {
+	// 	fmt.Println(k, unSortedMap[k])
+	// }
+
 	//sort values
 	values := make([]int ,0)
 	for _, v := range charactersCounterMap{
