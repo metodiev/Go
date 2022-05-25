@@ -84,8 +84,7 @@ func sortedInsert(llist *DoublyLinkedListNode, data int32) *DoublyLinkedListNode
 	}
 
 	for currentNode != nil && data > currentNode.data {
-		previous.data = currentNode.data
-		previous.next = currentNode.next
+		previous = *currentNode
 		currentNode = currentNode.next
 	}
 
@@ -110,7 +109,7 @@ func main() {
 	llist.insertNodeIntoDoublyLinkedList(2)
 	llist.insertNodeIntoDoublyLinkedList(3)
 
-	sortedInsert(llist.head, 4)
+	sortedInsert(llist.head, 5)
 
 	//printDoublyLinkedList(llist1, " ", writer)
 
