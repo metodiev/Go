@@ -18,3 +18,5 @@ func main() {
 // $ cd ~/go/pkg/darwin_amd64/
 // $ ls -l aPackage.a
 // -rw-r--r-- 1 mtsouk staff 4980 Dec 22 06:12 aPackage.a
+
+//go tool compile aPackage.go
